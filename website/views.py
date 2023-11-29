@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Blueprint, render_template, request, flash, jsonify
 from flask_login import login_required, current_user
 from .models import Note
@@ -33,3 +34,13 @@ def delete_note():
             db.session.commit()
             
     return jsonify({})
+=======
+from flask import Blueprint, render_template
+
+views = Blueprint('views', __name__)
+
+@views.route('/')
+def home():
+    return render_template("home.html")
+
+>>>>>>> 022ef345da09b8407efbb019c3840aaa35c0036d
